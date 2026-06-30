@@ -36,6 +36,13 @@ namespace practice1.Controllers
 
                 return View();
             }
+
+
+        }
+
+        public IActionResult Register()
+        {
+            return View();
         }
     }
 }
