@@ -86,21 +86,6 @@ Press **F5** or click **Run** in Visual Studio.
 4. Perform Create, Read, Update, and Delete operations.
 5. Unauthorized users cannot access protected pages.
 
----
-
-## 📸 Screenshots
-
-You can add screenshots here.
-
-* Login Page
-* Registration Page
-* Dashboard
-* Create Grievance
-* Edit Grievance
-* Grievance List
-
----
-
 ## 📚 Learning Outcomes
 
 This project helped in understanding:
