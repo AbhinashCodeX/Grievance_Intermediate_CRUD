@@ -1,0 +1,51 @@
+﻿@model practice1.Models.Grievance
+
+<h2>Edit Grievance</h2>
+
+<form asp-action="Edit" method="post">
+
+    <!-- Hidden Id -->
+    <input asp-for="GrevanceId" type="hidden" />
+
+    <div class="mb-3">
+        <label asp-for="EmployeeName"></label>
+        <input asp-for="EmployeeName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="IssueTitle"></label>
+        <input asp-for="IssueTitle" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="priority"></label>
+        <select asp-for="priority" class="form-control">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="status"></label>
+        <select asp-for="status" class="form-control">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Update
+    </button>
+
+    <a asp-action="GrvList" class="btn btn-secondary">
+        Back
+    </a>
+
+</form>
