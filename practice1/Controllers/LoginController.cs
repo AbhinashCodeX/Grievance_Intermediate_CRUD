@@ -39,10 +39,31 @@ namespace practice1.Controllers
 
 
         }
-
+        //Ye wala sirf register view ke liye bana hai
         public IActionResult Register()
         {
             return View();
         }
+        //User Registration logic Query --> if user clicks on register button this method will trigger
+        [HttpPost]
+        public IActionResult Register(User user)
+        {
+            if (user.Password != user.ConfirmPassword)
+            {
+                ViewBag.Message = "Password and Confirm Password do not match.";
+                return View();
+            }
+            bool result = _repo.Register(user);
+
+            if (result)
+            {
+                return RedirectToAction("Login");
+            }
+
+            ViewBag.Message = "Registration Failed";
+
+            return View();
+        }
     }
 }
+
